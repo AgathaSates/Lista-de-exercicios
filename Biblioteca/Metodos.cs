@@ -1,11 +1,13 @@
-﻿namespace Biblioteca
+﻿using System.Globalization;
+
+namespace Biblioteca
 {
     public class Metodos
     {
         public static double ValorValidoDouble()
         {
             double medida;
-            while (!double.TryParse(Console.ReadLine().Replace(',','.'), out medida))
+            while (!double.TryParse(Console.ReadLine()!.Replace(',','.'), NumberStyles.Any, CultureInfo.InvariantCulture, out medida))
             {
                 Console.Write(" -> (X) Valor inválido! Digite novamente: ");
             }
