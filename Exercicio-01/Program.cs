@@ -22,13 +22,13 @@ internal class Program
 
         Console.Write("-> Digite a largura da caixa: ");
         double largura = Metodos.ValorValidoDouble();
-
+ 
         Console.Write("-> Digite a altura da caixa: ");
         double altura = Metodos.ValorValidoDouble();
-
+   
         double resultado = comprimento * largura * altura;
         Console.WriteLine("----------------------------------------------");
-        Console.WriteLine($" -> O volume da caixa é de {resultado:F4} cm³.");
+        Console.WriteLine($" -> O volume da caixa é de {resultado:F2} cm³.");
         Console.WriteLine("----------------------------------------------");
     }       
 }
