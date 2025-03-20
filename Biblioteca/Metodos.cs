@@ -5,15 +5,16 @@
         public static double ValorValidoDouble()
         {
             double medida;
-            while (!double.TryParse(Console.ReadLine(), out medida))
+            while (!double.TryParse(Console.ReadLine().Replace(',','.'), out medida))
             {
                 Console.Write(" -> (X) Valor inválido! Digite novamente: ");
             }
             return medida;
         }
+
         public static bool Continuar()
         {
-            Console.Write("Deseja continuar? (S/N) ");
+            Console.Write("Deseja efetuar outro calculo? (S/N) ");
             string opcaoContinuar = Console.ReadLine()!.ToUpper();
             while (string.IsNullOrWhiteSpace(opcaoContinuar) || opcaoContinuar.ToUpper() != "S" && opcaoContinuar.ToUpper() != "N")
             {
