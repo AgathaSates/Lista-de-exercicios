@@ -28,7 +28,7 @@ internal class Program
 
         double resultado = comprimento * largura * altura;
         Console.WriteLine("----------------------------------------------");
-        Console.WriteLine($" -> O volume da caixa é de {resultado} cm³.");
+        Console.WriteLine($" -> O volume da caixa é de {resultado:F4} cm³.");
         Console.WriteLine("----------------------------------------------");
     }       
 }
