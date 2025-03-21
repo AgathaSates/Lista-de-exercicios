@@ -14,9 +14,19 @@ internal class Program
 
         static void Operacao() 
         {
-            Console.Write("-> Digite a temperatura em Celsius a ser convertido para Fahrenheit:");
+            Console.Write("-> Digite a temperatura em Celsius a ser convertido para Fahrenheit: ");
             double celsius = Metodos.ValorValidoDouble();
 
+            double fahrenheit = (celsius * 9 / 5) + 32;
+
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine(" Formula: ");
+            Console.WriteLine(" -> Fahrenheit = (Celsius x 9/5) + 32");
+            Console.WriteLine(" Solução:");
+            Console.WriteLine($" -> Fahrenheit = ({celsius} x 9/5) + 32");
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine($" -> A temperatura de {celsius}°C é equivalente a {fahrenheit:F1}°F.");
+            Console.WriteLine("-------------------------------------------------------");
         }
     }
 }
