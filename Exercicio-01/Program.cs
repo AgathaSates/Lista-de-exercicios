@@ -20,32 +20,39 @@ internal class Program
         double comprimento;
         double largura;
         double altura;
-        while (true) 
+
+        Console.Write("-> Digite o comprimento da caixa: ");
+        comprimento = Metodos.ValorValidoDouble();
+
+        while (comprimento <= 0)
         {
-            Console.Clear();
-            Metodos.Titulo("    Volume de uma caixa retangular");
-
-            Console.Write("-> Digite o comprimento da caixa: ");
+            Console.WriteLine(" -> (X) O comprimento deve ser maior que zero.");
+            Console.Write("-> Digite o comprimento da caixa novamente: ");
             comprimento = Metodos.ValorValidoDouble();
+        }
 
-            Console.Write("-> Digite a largura da caixa: ");
+        Console.Write("-> Digite a largura da caixa: ");
+        largura = Metodos.ValorValidoDouble();
+
+        while (largura <= 0)
+        {
+            Console.WriteLine(" -> (X) A largura deve ser maior que zero.");
+            Console.Write("-> Digite a largura da caixa novamente: ");
             largura = Metodos.ValorValidoDouble();
+        }
 
-            Console.Write("-> Digite a altura da caixa: ");
+        Console.Write("-> Digite a altura da caixa: ");
+        altura = Metodos.ValorValidoDouble();
+
+        while (altura <= 0)
+        {
+            Console.WriteLine(" -> (X) A altura deve ser maior que zero.");
+            Console.Write("-> Digite a altura da caixa novamente: ");
             altura = Metodos.ValorValidoDouble();
-
-            if (comprimento <= 0 || largura <= 0 || altura <= 0)
-            {
-                Console.WriteLine(" -> (X) O comprimento, largura e a altura devem ser maiores que zero.");
-                Console.Write(" -> Digite os valores novamente presionando enter:");
-                Console.ReadKey();
-                Console.Clear();
-            }
-            else
-                break;
         }
         
         double resultado = comprimento * largura * altura;
+
         Console.WriteLine("------------------------------------------------");
         Console.WriteLine(" Formula: ");
         Console.WriteLine(" -> Volume = comprimento x largura x altura");

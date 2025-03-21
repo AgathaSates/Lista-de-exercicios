@@ -8,7 +8,8 @@ internal class Program
     static void Main(string[] args)
     {
         Console.Title = "Volume de um Cilindro";
-        do { 
+        do
+        {
             Metodos.Titulo("        Volume de um cilindro");
             Operacao();
         } while (Metodos.Continuar());
@@ -17,28 +18,31 @@ internal class Program
     {
         double raio;
         double altura;
-        while (true)
-        {
-            Console.Clear();
-            Metodos.Titulo("        Volume de um cilindro");
 
-            Console.Write("-> Digite o raio do cilindro: ");
+        Console.Write("-> Digite o raio do cilindro: ");
+        raio = Metodos.ValorValidoDouble();
+
+        while (raio <= 0)
+        {
+            Console.WriteLine(" -> (X) O raio deve ser maior que zero.");
+            Console.Write("-> Digite o raio do cilindro novamente: ");
             raio = Metodos.ValorValidoDouble();
 
-            Console.Write("-> Digite a altura do cilindro: ");
+        }
+
+        Console.Write("-> Digite a altura do cilindro: ");
+        altura = Metodos.ValorValidoDouble();
+
+        while (altura <= 0)
+        {
+            Console.WriteLine(" -> (X) A altura deve ser maior que zero.");
+            Console.Write("-> Digite a altura do cilindro novamente: ");
             altura = Metodos.ValorValidoDouble();
 
-            if (raio <= 0 || altura <= 0)
-            {
-                Console.WriteLine(" -> (X) O raio e a altura devem ser maiores que zero.");
-                Console.Write(" -> Digite os valores novamente presionando enter:");
-                Console.ReadKey();
-                Console.Clear();
-            }
-            else
-                break;
         }
+
         double resultado = Math.PI * Math.Pow(raio, 2) * altura;
+
         Console.WriteLine("----------------------------------------------");
         Console.WriteLine(" Formula: ");
         Console.WriteLine(" -> Volume = PI × raio² × altura ");

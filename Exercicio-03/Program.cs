@@ -20,27 +20,20 @@ internal class Program
         {
             double kmInicial;
             double kmFinal;
-            while (true)
+
+            Console.Write("-> Digite a quilometragem inicial: ");
+            kmInicial = Metodos.ValorValidoDouble();
+
+            Console.Write("-> Digite a quilometragem final: ");
+            kmFinal = Metodos.ValorValidoDouble();
+
+            while (kmFinal <= kmInicial)
             {
-                Console.Clear();
-                Metodos.Titulo("        Consumo de combustível");
-
-                Console.Write("-> Digite a quilometragem inicial: ");
-                kmInicial = Metodos.ValorValidoDouble();
-
-                Console.Write("-> Digite a quilometragem final: ");
+                Console.WriteLine(" -> (X) A quilometragem final deve ser maior que a inicial.");
+                Console.Write("-> Digite a quilometragem final novamente: ");
                 kmFinal = Metodos.ValorValidoDouble();
-
-                if (kmFinal <= kmInicial)
-                {
-                    Console.WriteLine(" -> (X) A quilometragem final deve ser maior que a inicial.");
-                    Console.Write(" -> Digite os valores novamente presionando enter:");
-                    Console.ReadKey();
-                    Console.Clear();
-                }
-                else
-                    break;
             }
+
             Console.Write("-> Digite o consumo de combustível após a viagem (litros): ");
             double consumo = Metodos.ValorValidoDouble();
 

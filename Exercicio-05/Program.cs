@@ -4,12 +4,13 @@ namespace Exercicio_05;
 
 internal class Program
 {
-   // 5. Crie um programa para calcular o salário total de um vendedor.Deverá ser informado o salário base e o total de
-   //vendas.A comissão é calculada com um percentual(informado pelo usuário) sobre o total de vendas.
+    // 5. Crie um programa para calcular o salário total de um vendedor.Deverá ser informado o salário base e o total de
+    //vendas.A comissão é calculada com um percentual(informado pelo usuário) sobre o total de vendas.
     static void Main(string[] args)
     {
         Console.Title = "Calculo de salário de um vendedor";
-        do{
+        do
+        {
             Metodos.Titulo("    Calculo de salário de um vendedor");
             Operacao();
         } while (Metodos.Continuar());
@@ -19,34 +20,35 @@ internal class Program
             double salarioBase;
             double totalVendas;
             double percentual;
-            while (true)
+
+
+            Metodos.Titulo("    Calculo de salário de um vendedor");
+
+            Console.Write("-> Digite o salário base: ");
+            salarioBase = Metodos.ValorValidoDouble();
+            while (salarioBase <= 0)
             {
-                Console.Clear();
-                Metodos.Titulo("    Calculo de salário de um vendedor");
-
-                Console.Write("-> Digite o salário base: ");
+                Console.WriteLine(" -> (X) O salário deve ser maior que zero.");
+                Console.Write("-> Digite o salário base novamente: ");
                 salarioBase = Metodos.ValorValidoDouble();
+            }
 
-                Console.Write("-> Digite o total de vendas: ");
-                totalVendas = Metodos.ValorValidoDouble();
+            Console.Write("-> Digite o total de vendas: ");
+            totalVendas = Metodos.ValorValidoDouble();
 
-                Console.Write("-> Digite a porcentagem de comissão: ");
+            Console.Write("-> Digite a porcentagem de comissão: ");
+            percentual = Metodos.ValorValidoDouble();
+
+            while (percentual <= 0)
+            {
+                Console.WriteLine(" -> (X) A porcentagem de comissão deve ser maior que zero.");
+                Console.Write("-> Digite a porcentagem de comissão novamente: ");
                 percentual = Metodos.ValorValidoDouble();
-
-                if (percentual <= 0 || salarioBase <= 0)
-                {
-                    Console.WriteLine(" -> (X) O salário ou porcentagem de comissão devem ser maiores que zero.");
-                    Console.Write(" -> Digite os valores novamente presionando enter:");
-                    Console.ReadKey();
-                    Console.Clear();
-                }
-                else
-                    break;
-                
             }
 
             double comissao = totalVendas * (percentual / 100);
             double salarioTotal = salarioBase + comissao;
+
             Console.WriteLine("-------------------------------------------------------");
             Console.WriteLine(" Formula: ");
             Console.WriteLine();
