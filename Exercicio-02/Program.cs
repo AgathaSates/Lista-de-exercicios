@@ -9,19 +9,43 @@ internal class Program
     {
         Console.Title = "Volume de um Cilindro";
         do { 
-            Metodos.Titulo("Calcule o volume de um cilindro");
+            Metodos.Titulo("        Volume de um cilindro");
             Operacao();
         } while (Metodos.Continuar());
     }
     static void Operacao()
     {
-        Console.Write("-> Digite o raio do cilindro: ");
-        double raio = Metodos.ValorValidoDouble();
-        Console.Write("-> Digite a altura do cilindro: ");
-        double altura = Metodos.ValorValidoDouble();
+        double raio;
+        double altura;
+        while (true)
+        {
+            Console.Clear();
+            Metodos.Titulo("        Volume de um cilindro");
+
+            Console.Write("-> Digite o raio do cilindro: ");
+            raio = Metodos.ValorValidoDouble();
+
+            Console.Write("-> Digite a altura do cilindro: ");
+            altura = Metodos.ValorValidoDouble();
+
+            if (raio <= 0 || altura <= 0)
+            {
+                Console.WriteLine(" -> (X) O raio e a altura devem ser maiores que zero.");
+                Console.Write(" -> Digite os valores novamente presionando enter:");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else
+                break;
+        }
         double resultado = Math.PI * Math.Pow(raio, 2) * altura;
         Console.WriteLine("----------------------------------------------");
-        Console.WriteLine($" -> O volume do cilindro é de {resultado:F2} cm³.");
-        Console.WriteLine("----------------------------------------------");
+        Console.WriteLine(" Formula: ");
+        Console.WriteLine(" -> Volume = PI × raio² × altura ");
+        Console.WriteLine(" Solução:");
+        Console.WriteLine($" -> Volume = {Math.PI:f2} x {raio}² x {altura} ");
+        Console.WriteLine("-----------------------------------------------------");
+        Console.WriteLine($" -> O volume do cilindro é de {resultado:F2} unidades cúbicas.");
+        Console.WriteLine("-----------------------------------------------------");
     }
 }

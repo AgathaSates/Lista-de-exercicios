@@ -6,12 +6,19 @@ namespace Biblioteca
     {
         public static double ValorValidoDouble()
         {
-            double medida;
-            while (!double.TryParse(Console.ReadLine()!.Replace(',','.'), NumberStyles.Any, CultureInfo.InvariantCulture, out medida))
+            double medidaValida;
+                      
+            while(true)
             {
-                Console.Write(" -> (X) Valor inválido! Digite novamente: ");
+                string medida = Console.ReadLine()!;
+                if (string.IsNullOrWhiteSpace(medida) || !double.TryParse(medida.Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out medidaValida))
+                {
+                    Console.Write(" -> (X) Valor inválido! Digite novamente: ");
+                }
+                else
+                    break;
             }
-            return medida;
+            return medidaValida;
         }
 
         public static bool Continuar()
