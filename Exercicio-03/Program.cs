@@ -59,7 +59,7 @@ internal class Program
             Console.WriteLine($" -> Distância percorrida = {kmFinal} - {kmInicial}");
             Console.WriteLine($" -> Consumo por KM = {consumo} ÷ {distanciaPercorrida}");
             Console.WriteLine("-------------------------------------------------------");
-            Console.WriteLine($" -> O consumo de combustível foi de: {consumoPorKm:F4} L/KM");
+            Console.WriteLine($" -> O consumo de combustível foi de: {consumoPorKm:F4} L/KM.");
             Console.WriteLine("-------------------------------------------------------");
         }
     }
