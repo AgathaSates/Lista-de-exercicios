@@ -43,15 +43,7 @@ internal class Program
             else
                 break;
         }
-        Console.Write("-> Digite o comprimento da caixa: ");
-        comprimento = Metodos.ValorValidoDouble();
-
-        Console.Write("-> Digite a largura da caixa: ");
-        largura = Metodos.ValorValidoDouble();
- 
-        Console.Write("-> Digite a altura da caixa: ");
-        altura = Metodos.ValorValidoDouble();
-   
+        
         double resultado = comprimento * largura * altura;
         Console.WriteLine("------------------------------------------------");
         Console.WriteLine(" Formula: ");
