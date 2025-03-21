@@ -7,8 +7,7 @@ internal class Program
     static void Main(string[] args)
     {
         Console.Title = "Média Harmônica";
-        do
-        {
+        do{
             Metodos.Titulo("           Média Harmônica");
             Operacao();
         } while (Metodos.Continuar());

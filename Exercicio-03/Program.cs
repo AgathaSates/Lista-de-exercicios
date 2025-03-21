@@ -11,7 +11,7 @@ internal class Program
     static void Main(string[] args)
     {
         Console.Title = "Consumo de combustível por quilômetro percorrido";
-        do {
+        do{
             Metodos.Titulo("        Consumo de combustível");
             Operacao();
         } while (Metodos.Continuar());

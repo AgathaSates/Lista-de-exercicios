@@ -8,8 +8,7 @@ internal class Program
     static void Main(string[] args)
     {
         Console.Title = "Volume de um Cilindro";
-        do
-        {
+        do{
             Metodos.Titulo("        Volume de um cilindro");
             Operacao();
         } while (Metodos.Continuar());

@@ -7,15 +7,14 @@ internal class Program
     static void Main(string[] args)
     {
         Console.Title = "Volume de uma caixa retangular";
-        do
-        {
+        do{
             Metodos.Titulo("    Volume de uma caixa retangular");
             Operacao();
         } while (Metodos.Continuar());
 
     }
-   
-    static void Operacao() 
+
+    static void Operacao()
     {
         double comprimento;
         double largura;
@@ -50,7 +49,7 @@ internal class Program
             Console.Write("-> Digite a altura da caixa novamente: ");
             altura = Metodos.ValorValidoDouble();
         }
-        
+
         double resultado = comprimento * largura * altura;
 
         Console.WriteLine("------------------------------------------------");
@@ -61,5 +60,5 @@ internal class Program
         Console.WriteLine("------------------------------------------------");
         Console.WriteLine($" -> Resultado: O volume da caixa é de {resultado:F2} cm³.");
         Console.WriteLine("------------------------------------------------");
-    }       
+    }
 }
