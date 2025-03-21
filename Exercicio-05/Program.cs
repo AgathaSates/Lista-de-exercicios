@@ -9,8 +9,7 @@ internal class Program
     static void Main(string[] args)
     {
         Console.Title = "Calculo de salário de um vendedor";
-        do
-        {
+        do{
             Metodos.Titulo("    Calculo de salário de um vendedor");
             Operacao();
         } while (Metodos.Continuar());
