@@ -21,6 +21,22 @@ namespace Biblioteca
             return medidaValida;
         }
 
+        public static int ValorValidoInt() 
+        {
+            int medidaValida;
+            while (true)
+            {
+                string medida = Console.ReadLine()!;
+                if (string.IsNullOrWhiteSpace(medida) || !int.TryParse(medida, out medidaValida))
+                {
+                    Console.Write(" -> (X) Valor inválido! Digite novamente: ");
+                }
+                else
+                    break;
+            }
+            return medidaValida;
+        }
+
         public static bool Continuar()
         {
             Console.Write("Deseja efetuar outro calculo? (S/N) ");
