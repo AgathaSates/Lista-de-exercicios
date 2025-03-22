@@ -24,10 +24,10 @@ internal class Program
 
             while (peso1 <= 0 || nota1 <= 0)
             {
+                Console.WriteLine("----------------------------------------------------");
                 Console.WriteLine(" -> (X) O peso e a nota devem ser maiores que zero.");
                 Console.WriteLine(" -> Informe os valores novamente:");
-                Console.WriteLine();
-
+                Console.WriteLine("----------------------------------------------------");
                 Console.Write("-> Digite a nota da 1° prova: ");
                 nota1 = Metodos.ValorValidoDouble();
 
@@ -43,9 +43,10 @@ internal class Program
 
             while (nota2 <= 0 || peso2 <= 0)
             {
+                Console.WriteLine("----------------------------------------------------");
                 Console.WriteLine(" -> (X) O peso e a nota devem ser maiores que zero.");
                 Console.WriteLine(" -> Informe os valores novamente:");
-                Console.WriteLine();
+                Console.WriteLine("----------------------------------------------------");
                 Console.Write("-> Digite a nota da 2° prova: ");
                 nota2 = Metodos.ValorValidoDouble();
                 Console.Write("-> Digite o peso desta nota: ");
