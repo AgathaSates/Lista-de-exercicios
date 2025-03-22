@@ -43,9 +43,8 @@ internal class Program
             Console.WriteLine();
             Console.WriteLine($" -> Dias de vida = {idade} x 365");
             Console.WriteLine("-------------------------------------------------------");
-            Console.WriteLine($"{nome}, você tem {idade} e já viveu {diasDeVida} dias!");
+            Console.WriteLine($"-> {nome}, você tem {idade} e já viveu {diasDeVida} dias!");
             Console.WriteLine("-------------------------------------------------------");
-
         }
     }
 }
