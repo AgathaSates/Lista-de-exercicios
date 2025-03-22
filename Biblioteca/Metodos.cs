@@ -72,8 +72,7 @@ namespace Biblioteca
 
                                                       // .all para conferir se {nome} atende todas as condições
 
-                    Console.Write(" -> (X) Nome inválido! Digite novamente: ");
-                    nome = Console.ReadLine()!;
+                    Console.Write(" -> (X) Nome inválido! Digite novamente: ");                  
                 }
                 else
                     break;
